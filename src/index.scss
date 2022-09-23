@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+	font-family: 'Play';
+	src: url('../src/components/fonts/Play-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*шапка*/
+
+.header{
+  border-bottom: 1px solid rgba(224, 219, 219, 0.4);
+  .wrap__content_header{
+    margin: 0 auto;
+    max-width: 1180px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  .header__logo{
+    margin-right: 40px;
+  }
+  .header__search_block{
+    margin-right: 680px;
+      .header__search_img{
+       width: 30px;
+       height: 30px;
+      }
+  }
+}
+
+  /*поиск*/
+  .header__search_block{
+    position: relative;
+    display: flex;
+    border: 0.5px solid #503131;
+    width: 280px;
+      .header__search_input{
+        border: none;
+        width: 280px;
+        color: #503131;
+        padding-left: 15px;
+        background-image: url('../src/components/img/search.png');
+        background-repeat: no-repeat;
+        background-position: 250px center;
+        font-family: 'Play';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #503131;
+      }
+}
+
+/*пкркуллючение тем*/
+
+.swiper_theme{
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: #000000;
+}
+
+/*main*/
+
+.wrap__content_main{
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+/*nav*/
+.nav{
+  margin-top: 40px;
+  .nav__list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    .nav__list_item{
+      margin-right: 70px;
+      .nav__list_item_link{
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 21px;
+        font-family: 'Play';
+        color: #E0DBDB;
+        &:hover{
+          color: #503131;
+        }
+        &:active{
+          color: #503131;
+        }
+      }
+    }
+  }
+}
+
+/*content*/
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .content__card{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    height: 390px;
+    
+  .content__card_img{
+    width: 280px;
+    height: 337px;
+  }
+  } 
+  .content__card_headding{
+    width: 280px;
+    height: 47px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #503131;
+    text-align: center;
+  }
+  
+}
