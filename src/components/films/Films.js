@@ -1,4 +1,6 @@
 import ItemFilms from './itemFilms/ItemFilms';
+import axios from 'axios';
+import React from 'react';
 
 class Films extends React.Component {
   state ={
