@@ -2,6 +2,7 @@ import ItemFilms from './itemFilms/ItemFilms';
 import axios from 'axios';
 import React from 'react';
 
+
 class Films extends React.Component {
   state ={
     isLoading: true,
@@ -22,6 +23,16 @@ class Films extends React.Component {
     this.getMovies();
   }
 
+  render(){
+    const {isLoading, movies} = this.state;
+    return <main className='content'>{isLoading ? "Loading..." : movies.map(movie => {
+        console.log(movie)
+    return(
+    <ItemFilms 
+    title={movie.title} 
+    poster={movie.medium_cover_image} />
+    )})}</main>
+  }
 }
 
 export default Films
