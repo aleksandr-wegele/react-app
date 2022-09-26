@@ -1,19 +1,5 @@
 import ItemFilms from './itemFilms/ItemFilms';
 
-function Films (){
-    return (
-    <main className="content">
-        <ItemFilms/>
-        <ItemFilms/>
-        <ItemFilms/>
-        <ItemFilms/>
-        <ItemFilms/>
-        <ItemFilms/>
-        <ItemFilms/>
-        <ItemFilms/>
-    </main>
-        
-    )
 class Films extends React.Component {
   state ={
     isLoading: true,
