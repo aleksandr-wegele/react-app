@@ -1,6 +1,8 @@
+import FilmsDescription from '../filmsDescription/FilmsDescription';
 import ItemFilms from './itemFilms/ItemFilms';
 import axios from 'axios';
 import React from 'react';
+
 
 
 class Films extends React.Component {
@@ -28,10 +30,20 @@ class Films extends React.Component {
     return <main className='content'>{isLoading ? "Loading..." : movies.map(movie => {
         console.log(movie)
     return(
-    <ItemFilms 
+  /*   <ItemFilms 
     title={movie.title} 
-    poster={movie.medium_cover_image} />
-    )})}</main>
+    poster={movie.medium_cover_image} /> */
+    
+    <FilmsDescription title={movie.title}
+    year={movie.year}
+    rating={movie.rating}
+    poster={movie.large_cover_image}
+    runtime={movie.runtime}
+    genres={movie.genres}
+    description={movie.description_full}/>
+    )})}
+    </main>
+    
   }
 }
 
