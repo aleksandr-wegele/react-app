@@ -1,0 +1,41 @@
+.root{
+    height: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap:25px;
+    li{
+        cursor: pointer;
+    }
+    a {
+        font-family: 'Play';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #503131;
+        &:hover{
+            font-family: 'Play';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 24px;
+            color: #503131;
+        }
+    }
+    :global {
+        .selected{
+        a{
+            font-family: 'Play';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            color: #503131;
+        }
+    }
+}
+}
