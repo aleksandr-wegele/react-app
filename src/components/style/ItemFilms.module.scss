@@ -1,0 +1,108 @@
+a{
+  text-decoration: none;
+}
+
+.content__card{
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    &:hover{.content__card_info_hover{
+      display: block;
+    }}
+    
+    .content__card_info{
+      z-index: 0;
+      width: 280px;
+      height: 345px;
+      
+    }
+  .content__card_headding{
+      margin: 0;
+      width: 280px;
+      height: 20px;
+      margin-top: 5px;
+      display: inline-block;
+      font-family: 'Play';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #503131;
+      text-align: center;
+    }
+}
+  
+.content__card_info_hover{
+  display: none;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.555);
+  width: 280px;
+  height: 345px;
+  &:hover{
+    display: block;
+  }
+  
+  
+
+  .content__card_info_like_img{
+    position: absolute;
+    left: 240px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .content__card_info_genres{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+    padding-top: 250px;
+    padding-left: 10px;
+  }
+  .content__card_info_runtime{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+  .content__card_info_year{
+    color: #ffffff;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    padding-left: 10px;
+    
+  }
+  .content__card_info_rating{
+    position: absolute;
+    left: 81.79%;
+    right: 3.57%;
+    top: 87.54%;
+    bottom: 7.12%;
+    color: #ffffff;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    .content__card_info_rating_img{
+      margin-left: 2px;
+    }
+  }
+}
+
