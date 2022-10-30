@@ -1,3 +1,7 @@
+html{
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -34,10 +38,23 @@ code {
     margin-right: 40px;
   }
   .header__search_block{
+    position: relative;
     margin-right: 680px;
-      .header__search_img{
-       width: 30px;
-       height: 30px;
+      .search_img{
+       position: absolute;
+       width: 18px;
+       height: 18px;
+       top: 3px;
+       right: 3px;
+      }
+      .clear_search_btn{
+        align-items: center;
+        position: absolute;
+        top: 2px;
+        right: 3px;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
       }
   }
 }
@@ -49,13 +66,11 @@ code {
     border: 0.5px solid #503131;
     width: 280px;
       .header__search_input{
+        outline-style: initial;
         border: none;
         width: 280px;
         color: #503131;
-        padding-left: 15px;
-        background-image: url('../src/components/img/search.png');
-        background-repeat: no-repeat;
-        background-position: 250px center;
+        padding-left: 10px;
         font-family: 'Play';
         font-style: normal;
         font-weight: 400;
@@ -103,7 +118,7 @@ code {
         &:hover{
           color: #503131;
         }
-        &:active{
+        &:Focus{
           color: #503131;
         }
       }
@@ -114,35 +129,58 @@ code {
 /*content*/
 
 .content{
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  .content__card{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 280px;
-    height: 390px;
-    
-  .content__card_img{
-    width: 280px;
-    height: 337px;
+  gap: 10px;
+}
+
+/*тема*/
+ html[data-theme="dark"]{
+  --button-text-color: #fff;
+  --button-background-color: rgb(141, 21, 240);
+  --button-border-color: #fff;
+
+  --input-text-color:#fff;
+  --input-placeholder-text-color:#fff;
+  --input-background-color: #red;
+  --input-border-color: #fff;
+
+  --background-color: rgb(49, 49, 49);
+ }
+
+ html[data-theme="light"]{
+  --button-text-color: #000;
+  --button-background-color: #fff;
+  --button-border-color: #000;
+
+  --input-text-color:#000;
+  --input-placeholder-text-color:#000;
+  --input-background-color: #000;
+  --input-border-color: #000;
+
+  --background-color: rgb(209, 209, 209);
+ }
+
+ .App{
+  background-color: var(--background-color);
+  transition: background-color 200ms linear;
+  button,
+  button:hover,
+  button:active,
+  button:focus,
+  button:not(:disabled):not(.disabled){
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
+    border-color: var(--button-border-color);
   }
-  } 
-  .content__card_headding{
-    width: 280px;
-    height: 47px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    display: inline-block;
-    font-family: 'Play';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-    color: #503131;
-    text-align: center;
+  input,
+  input:focus{
+    color: var(--input-text-color);
+    background-color: var(--input-background-color);
+    border-color: var(--input-border-color);
+    input::placeholder{
+      color: var(--input-placeholder-text-color);
+    }
   }
-  
 }

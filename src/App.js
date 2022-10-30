@@ -1,8 +1,10 @@
 import Header from './components/Header';
 import Main from './components/Main';
 import AppContext from './Context';
+import {useTheme} from './components/hooks/useTheme'
 
 function App() {
+  const {theme, setTheme} = useTheme();
   return ( 
     <AppContext.Provider value={{
       searchValue,
