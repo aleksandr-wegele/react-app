@@ -1,0 +1,73 @@
+.wrap__content_main{
+    margin: 0 auto;
+    max-width: 1180px;
+  }
+.nav{
+    margin-top: 40px;
+    .nav__list{
+      display: flex;
+      list-style: none;
+      padding: 0;
+      .nav__list_item{
+        margin-right: 70px;
+        .nav__list_item_link{
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 21px;
+          font-family: 'Play';
+          color: var(--color-link);
+          transition: color 400ms linear;
+          &:hover{
+            color: var(--color-link-hover);
+            transition: color 400ms linear;
+          }
+          &:Focus{
+            color: var(--color-link-hover);
+            transition: color 400ms linear;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 580px){
+    .wrap__content_main{
+      margin: 0 auto;
+      
+    }
+  .nav{
+      .nav__list{
+        justify-content: center;
+        gap: 50px;
+        .nav__list_item{
+          margin-right: 0;
+          .nav__list_item_link{
+            font-size: 22px;
+            line-height: 21px;
+            text-align: center;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 580px) and (max-width: 780px){
+    .nav{
+      .nav__list{
+        justify-content: center;
+        gap: 150px;
+        .nav__list_item{
+          margin-right: 0;
+          .nav__list_item_link{
+            font-size: 22px;
+            line-height: 21px;
+            text-align: center;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }

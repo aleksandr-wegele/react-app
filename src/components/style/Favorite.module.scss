@@ -1,0 +1,41 @@
+.wrap__content_main{
+    margin: 0 auto;
+    max-width: 1180px;
+    
+  }
+  
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+  
+  .favorite_empty{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 1180px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .favorite_empty_description{
+    font-family: 'Play';
+    font-weight: 400;
+    font-size: 17px;
+    line-height:31px;
+    color: var(--text-color);
+    transition: color 400ms linear;
+  }
+
+  @media (min-width: 320px) and (max-width: 560px){
+    .content{
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: 561px) and (max-width: 10000px){
+
+  }

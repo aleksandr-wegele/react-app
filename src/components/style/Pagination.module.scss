@@ -17,14 +17,14 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 21px;
-        color: #503131;
+        color: var(--text-color);
+        transition: color 400ms linear;
         &:hover{
             font-family: 'Play';
             font-style: normal;
             font-weight: 700;
             font-size: 21px;
             line-height: 24px;
-            color: #503131;
         }
     }
     :global {
@@ -34,8 +34,39 @@
             font-style: normal;
             font-weight: 700;
             font-size: 28px;
-            color: #503131;
+            color: var(--text-color);
         }
     }
 }
+}
+
+@media (min-width: 320px) and (max-width: 560px){
+    .root{
+        width: 280px;
+        height: 40px;
+        padding-bottom: 20px;
+        padding-left: 0;
+        margin-top: 25px;
+        margin-bottom: 0;
+        gap: 10px;
+        a {
+            font-size: 12px;
+            line-height: 18px;
+            &:hover{
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+        :global {
+            .selected{
+            a{
+                font-size: 21px;
+            }
+        }
+    }
+    }
+}
+
+@media (min-width: 561px) and (max-width: 10000px){
+
 }

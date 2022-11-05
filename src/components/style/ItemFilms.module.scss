@@ -30,8 +30,9 @@ a{
       font-weight: 400;
       font-size: 16px;
       line-height: 21px;
-      color: #503131;
+      color: var(--text-color);
       text-align: center;
+      transition: color 400ms linear;
     }
 }
   
@@ -106,3 +107,16 @@ a{
   }
 }
 
+@media (min-width: 320px) and (max-width: 560px){
+.content__card_info_hover{
+  display: block;
+  background-color: rgba(0, 0, 0, 0.226);
+}
+}
+
+@media (min-width: 561px) and (max-width: 780px){
+  .content__card_info_hover{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.226);
+  }
+}

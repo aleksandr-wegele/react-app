@@ -23,110 +23,15 @@ code {
 	font-style: normal;
 }
 
-/*шапка*/
-
-.header{
-  border-bottom: 1px solid rgba(224, 219, 219, 0.4);
-  .wrap__content_header{
-    margin: 0 auto;
-    max-width: 1180px;
-    display: flex;
-    align-items: center;
-    height: 80px;
-  }
-  .header__logo{
-    margin-right: 40px;
-  }
-  .header__search_block{
-    position: relative;
-    margin-right: 680px;
-      .search_img{
-       position: absolute;
-       width: 18px;
-       height: 18px;
-       top: 3px;
-       right: 3px;
-      }
-      .clear_search_btn{
-        align-items: center;
-        position: absolute;
-        top: 2px;
-        right: 3px;
-        cursor: pointer;
-        width: 18px;
-        height: 18px;
-      }
-  }
-}
-
-  /*поиск*/
-  .header__search_block{
-    position: relative;
-    display: flex;
-    border: 0.5px solid #503131;
-    width: 280px;
-      .header__search_input{
-        outline-style: initial;
-        border: none;
-        width: 280px;
-        color: #503131;
-        padding-left: 10px;
-        font-family: 'Play';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 21px;
-        color: #503131;
-      }
-}
-
-/*пeрeключение тем*/
-
-.swiper_theme{
-  font-family: 'Play';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 21px;
-  color: #000000;
-}
-
 /*main*/
 
 .wrap__content_main{
   margin: 0 auto;
   max-width: 1180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/*nav*/
-.nav{
-  margin-top: 40px;
-  .nav__list{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    .nav__list_item{
-      margin-right: 70px;
-      .nav__list_item_link{
-        text-decoration: none;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 21px;
-        font-family: 'Play';
-        color: #E0DBDB;
-        &:hover{
-          color: #503131;
-        }
-        &:Focus{
-          color: #503131;
-        }
-      }
-    }
-  }
-}
-
-/*content*/
 
 .content{
   height: 100%;
@@ -135,52 +40,57 @@ code {
   gap: 10px;
 }
 
+@media (min-width: 320px) and (max-width: 580px){
+  .content{
+    justify-content: center;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 780px){
+  .content{
+    justify-content: center;
+  }
+}
+
 /*тема*/
  html[data-theme="dark"]{
-  --button-text-color: #fff;
-  --button-background-color: rgb(141, 21, 240);
-  --button-border-color: #fff;
-
-  --input-text-color:#fff;
-  --input-placeholder-text-color:#fff;
-  --input-background-color: #red;
-  --input-border-color: #fff;
-
-  --background-color: rgb(49, 49, 49);
+  /*общие*/
+  --background-color: #272727;
+  --text-color: #ffffff;
+  /*шапка*/
+  --border-color: #e0dbdbd0;
+  --background-image: url('../public/img/logo_darktheme.png');
+  --search-image: url('../public/img/search-dark.png');
+  /*навигация*/
+  --color-link: #c3c3c3;
+  --color-link-hover: #503131;
+  --background-nav-image: url('../public/img/back-dark.png');
+  
+  --input-background-color: #272727;
+  --input-background-image: url('../public/img/search-dark.png');
+  
  }
 
  html[data-theme="light"]{
-  --button-text-color: #000;
-  --button-background-color: #fff;
-  --button-border-color: #000;
+  /*общие*/
+  --background-color: #ffffff;
+  --text-color: #503131;
+  /*шапка*/
+  --border-color: #e0dbdb66;
+  --background-image: url('../public/img/logo.png');
+  --search-image: url('../public/img/search.png');
+  /*навигация*/
+  --color-link: #E0DBDB;
+  --color-link-hover: #503131;
+  --background-nav-image: url('../public/img/back.svg');
 
-  --input-text-color:#000;
-  --input-placeholder-text-color:#000;
-  --input-background-color: #000;
-  --input-border-color: #000;
-
-  --background-color: rgb(209, 209, 209);
+  --input-background-color: #ffffff;
+  --input-background-image: url('../public/img/search.png');
+  
  }
 
  .App{
   background-color: var(--background-color);
-  transition: background-color 200ms linear;
-  button,
-  button:hover,
-  button:active,
-  button:focus,
-  button:not(:disabled):not(.disabled){
-    color: var(--button-text-color);
-    background-color: var(--button-background-color);
-    border-color: var(--button-border-color);
-  }
-  input,
-  input:focus{
-    color: var(--input-text-color);
-    background-color: var(--input-background-color);
-    border-color: var(--input-border-color);
-    input::placeholder{
-      color: var(--input-placeholder-text-color);
-    }
-  }
-}
+  transition: background-color 400ms linear;
+ }
+
