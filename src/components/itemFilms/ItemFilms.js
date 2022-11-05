@@ -1,4 +1,4 @@
-/* import Dog from '../../img/dog.png'; */
+
 
 import React from 'react';
 import { Link } from 'react-router-dom';

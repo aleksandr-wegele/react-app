@@ -21,14 +21,14 @@ function Description (props) {
                     </div>
                     <div className={styles.about__films}>
                         <h2 className={styles.about__title}>{props.location.state.title}</h2>
-                        <span className={styles.about__rating}>{props.location.state.rating}
+                        <div className={styles.about__rating}>{props.location.state.rating} 
                         <Box
                         sx={{
                             '& > legend': { mt: 0 },
                         }}
                         >
                         <Rating name="customized-10" defaultValue={props.location.state.rating} max={10} />
-                        </Box></span>
+                        </Box></div>
                         <div className={styles.about__colums}>
                             <div className={styles.about__colums_headdyng}>
                                 <p className={styles.about__colums_headdyng_content}>Language: </p>
