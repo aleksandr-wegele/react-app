@@ -94,17 +94,17 @@ const isFavoriteAdded = (id) =>{
     <Header/>
 
     <Route>
-      <Nav exact path="/"/>
+      <Nav exact path="/react-app/"/>
     </Route>
 
-    <Route exact path="/">
+    <Route exact path="/react-app/">
        <Films 
        addToFavorite={addToFavorite}/>
     </Route>
       
-    <Route exact path="/movi/:id" component={Description}/>
+    <Route exact path="/react-app/movi/:id" component={Description}/>
 
-    <Route exact path="/favorits">
+    <Route exact path="/react-app/favorits">
       <Favorite />
     </Route>
 

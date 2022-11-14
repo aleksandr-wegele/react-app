@@ -14,7 +14,7 @@ function Description (props) {
     return(
         <div className="wrap__content_main">
             <div className={styles.films__about}>
-                <Link to="/"><button className={styles.films__about_btn}> Back</button></Link>
+                <Link to="/react-app/"><button className={styles.films__about_btn}> Back</button></Link>
                 <div className={styles.about__content}>
                     <div className={styles.about__poster}>
                         <img className={styles.about__poster_img} src={props.location.state.imgUrl} alt="Poster"/>

@@ -38,13 +38,13 @@ function ItemFilms ({
             }}>
               <div className={styles.content__card_info_hover}>
                 <img 
-                src={isFavoriteAdded(id) ? "/img/like.png" : "/img/no-like.png"}
+                src={isFavoriteAdded(id) ? "img/like.png" : "img/no-like.png"}
                 alt="like" 
                 className={styles.content__card_info_like_img}
                 onClick={onClickFavorite}
                 />
                 <Link to={{
-                pathname: `/movi/${id}`,
+                pathname: `/react-app/movi/${id}`,
                 state: { 
                   id, 
                   title, 
@@ -62,12 +62,12 @@ function ItemFilms ({
                 <p className={styles.content__card_info_runtime}>{runtime} minuts</p>
                 <span className={styles.content__card_info_year}>{year}</span>
                 <span className={styles.content__card_info_rating}>{rating} 
-                <img src="/img/Star.png" alt="star" className={styles.content__card_info_rating_img}/></span>
+                <img src="img/Star.png" alt="star" className={styles.content__card_info_rating_img}/></span>
                 </Link> 
                 </div>
             </div>
             <Link to={{
-                pathname: `/movi/${id}`,
+                pathname: `/react-app/movi/${id}`,
                 state: { 
                   id, 
                   title, 

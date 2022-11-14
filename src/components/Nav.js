@@ -9,10 +9,10 @@ function Nav(){
         <nav className={styles.nav}>
           <ul className={styles.nav__list}>
             <li className={styles.nav__list_item}>
-              <Link to="/" className={styles.nav__list_item_link}>Films</Link>
+              <Link to="/react-app/" className={styles.nav__list_item_link}>Films</Link>
               </li>
             <li className={styles.nav__list_item}>
-              <Link to="/favorits" className={styles.nav__list_item_link}>Favorits</Link>
+              <Link to="/react-app/favorits" className={styles.nav__list_item_link}>Favorits</Link>
               </li>
           </ul>
         </nav>

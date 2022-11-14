@@ -23,7 +23,7 @@ const toggleThemeDark = () => {
     return(
         <header className={styles.header}>
         <div className={styles.wrap__content_header}>
-          <Link to="/"><div className={styles.header__logo}>Movie portal</div></Link>
+          <Link to="/react-app/"><div className={styles.header__logo}>Movie portal</div></Link>
           <div className={styles.header__search_block}>
             {searchValue && <img onClick={()=> setSearchValue('')} src='img/close.svg' alt='clear_search' className={styles.clear_search_btn}/>}
             <input onChange={onChangeSearchInput} value={searchValue} className={styles.header__search_input} placeholder="Search..." />
